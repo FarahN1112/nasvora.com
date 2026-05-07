@@ -1,107 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nasvora | Wholesale & Distribution Solutions</title>
 
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* GENERAL */
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    color:#333;
-    line-height:1.6;
+    font-family:'Inter',sans-serif;
+    line-height:1.7;
+    color:#1f2937;
     background:#ffffff;
 }
 
-/* LOGO */
-
-.logo-main{
-    width:420px;
-    max-width:90%;
-    height:auto;
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+nav{
+    background:white;
+    padding:18px 0;
+    border-bottom:1px solid #e5e7eb;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.navbar-logo{
+    width:190px;
+    height:auto;
+    display:block;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#374151;
+    margin-left:25px;
+    font-weight:500;
+}
+
+/* HERO */
+
+.hero{
     background:linear-gradient(135deg,#0f172a,#1e3a8a);
     color:white;
+    padding:120px 20px;
     text-align:center;
-    padding:140px 20px;
 }
 
-header h1{
-    font-size:65px;
+.hero h1{
+    font-size:64px;
     margin-bottom:20px;
+    font-weight:700;
 }
 
-header p{
-    font-size:24px;
+.hero p{
     max-width:850px;
     margin:auto;
+    font-size:22px;
+    opacity:0.95;
+}
+
+.hero-button{
+    display:inline-block;
+    margin-top:35px;
+    background:white;
+    color:#0f172a;
+    padding:14px 32px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
 }
 
 /* SECTIONS */
 
-section{
-    padding:90px 20px;
-    max-width:1100px;
-    margin:auto;
+.section{
+    padding:90px 0;
 }
 
-h2{
+.section-title{
     text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
     font-size:42px;
-    margin-bottom:25px;
-    color:#0f172a;
-}
-
-.section-text{
-    text-align:center;
-    max-width:850px;
-    margin:auto;
-    font-size:19px;
-}
-
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:50px;
-}
-
-.card{
-    background:#f5f5f5;
-    padding:35px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.card h3{
     margin-bottom:15px;
     color:#0f172a;
 }
 
-/* WHY SECTION */
+.section-title p{
+    color:#6b7280;
+    max-width:700px;
+    margin:auto;
+}
 
-.why{
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-card{
     background:#f8fafc;
-    max-width:100%;
+    padding:40px;
+    border-radius:18px;
+}
+
+.about-card h3{
+    margin-bottom:18px;
+    font-size:28px;
+    color:#0f172a;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border:1px solid #e5e7eb;
+    padding:35px;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+/* PRODUCT CATEGORIES */
+
+.category-section{
+    background:#ffffff;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    padding:35px;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.category-card h3{
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+/* WHY US */
+
+.why-section{
+    background:#f8fafc;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.why-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.why-box h3{
+    margin:15px 0;
+    color:#0f172a;
 }
 
 /* CONTACT */
@@ -110,235 +228,305 @@ h2{
     background:#0f172a;
     color:white;
     text-align:center;
-    max-width:100%;
 }
 
 .contact h2{
-    color:white;
+    font-size:42px;
+    margin-bottom:20px;
 }
 
 .contact p{
     font-size:18px;
+    margin-bottom:10px;
+}
+
+.contact a{
+    color:white;
+    text-decoration:none;
 }
 
 /* FOOTER */
 
 footer{
     background:#020617;
-    color:#cbd5e1;
+    color:#94a3b8;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
+    .hero h1{
+        font-size:42px;
+    }
 
-header h1{
-    font-size:45px;
+    .hero p{
+        font-size:18px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .navbar-logo{
+        width:150px;
+    }
 }
-
-header p{
-    font-size:18px;
-}
-
-h2{
-    font-size:32px;
-}
-
-.logo{
-    width:90px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- NAVBAR -->
 
-<header>
+<nav>
+    <div class="container nav-inner">
 
-    <img src="./logo.png" alt="Nasvora Logo" class="logo-main">
+        <div class="logo">
+            <img src="./logo.png" alt="Nasvora Logo" class="navbar-logo">
+        </div>
 
-</header>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#categories">Categories</a>
+            <a href="#why">Why Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="container">
+
+        <h1>Building Reliable Supply & Distribution Partnerships</h1>
+
+        <p>
+            Nasvora is a modern wholesale and distribution company focused on connecting brands,
+            suppliers, and retailers through efficient sourcing, dependable operations, and scalable
+            commerce solutions.
+        </p>
+
+        <a href="#contact" class="hero-button">Contact Us</a>
+
+    </div>
+</section>
 
 <!-- ABOUT -->
 
-<section>
+<section class="section" id="about">
+    <div class="container">
 
-    <h2>About Us</h2>
+        <div class="section-title">
+            <h2>About Nasvora</h2>
+            <p>
+                Professional sourcing, distribution, and commerce solutions built for long-term growth.
+            </p>
+        </div>
 
-    <p class="section-text">
+        <div class="about-grid">
 
-        Nasvora is a professional wholesale and distribution company focused on
-        building long-term supplier relationships and efficient commerce solutions.
-        We work with brands, distributors, and retail partners to support scalable
-        business growth through reliable sourcing, strategic purchasing, and modern
-        distribution operations.
+            <div class="about-card">
+                <h3>Who We Are</h3>
+                <p>
+                    Nasvora is a wholesale and distribution company dedicated to building strong supplier
+                    relationships and creating efficient product distribution channels across multiple
+                    industries and sales environments.
+                </p>
+                <br>
+                <p>
+                    We focus on professionalism, operational reliability, strategic sourcing, and scalable
+                    growth opportunities for both suppliers and retail partners.
+                </p>
+            </div>
 
-    </p>
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>
+                    Our mission is to simplify modern commerce by creating dependable partnerships,
+                    improving product accessibility, and supporting sustainable long-term business growth.
+                </p>
+                <br>
+                <p>
+                    We believe in transparency, efficiency, and delivering consistent value through
+                    strong business relationships.
+                </p>
+            </div>
 
+        </div>
+
+    </div>
 </section>
 
 <!-- SERVICES -->
 
-<section>
+<section class="section" id="services">
+    <div class="container">
 
-    <h2>What We Offer</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Wholesale Purchasing</h3>
+        <div class="section-title">
+            <h2>What We Offer</h2>
             <p>
-                Strategic sourcing and bulk purchasing solutions tailored for scalable operations.
+                Flexible business solutions designed to support suppliers, brands, and retailers.
             </p>
         </div>
 
-        <div class="card">
-            <h3>Distribution Solutions</h3>
-            <p>
-                Efficient product distribution across multiple sales channels.
-            </p>
-        </div>
+        <div class="services-grid">
 
-        <div class="card">
-            <h3>Supplier Partnerships</h3>
-            <p>
-                Building long-term relationships with brands and distributors.
-            </p>
-        </div>
+            <div class="service-card">
+                <h3>Wholesale Purchasing</h3>
+                <p>
+                    Strategic sourcing and bulk purchasing solutions tailored for scalable operations.
+                </p>
+            </div>
 
-    </div>
+            <div class="service-card">
+                <h3>Distribution Solutions</h3>
+                <p>
+                    Efficient product distribution across online and retail sales channels.
+                </p>
+            </div>
 
-</section>
+            <div class="service-card">
+                <h3>Supplier Partnerships</h3>
+                <p>
+                    Long-term relationship building with brands, manufacturers, and distributors.
+                </p>
+            </div>
 
-<!-- WHY WORK WITH US -->
+            <div class="service-card">
+                <h3>Marketplace Expansion</h3>
+                <p>
+                    Supporting brand visibility and growth through modern commerce platforms.
+                </p>
+            </div>
 
-<section class="why">
-
-    <div style="max-width:1100px;margin:auto;padding:0 20px;">
-
-    <h2>Why Work With Us</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Professional Operations</h3>
-            <p>
-                Structured systems and reliable business processes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Growth Focused</h3>
-            <p>
-                Long-term strategies designed for scalable growth.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Reliable Communication</h3>
-            <p>
-                Clear communication and responsive partnership management.
-            </p>
         </div>
 
     </div>
-
-    </div>
-
 </section>
 
 <!-- PRODUCT CATEGORIES -->
 
-<section>
+<section class="section category-section" id="categories">
+    <div class="container">
 
-    <h2>Product Categories</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Home & Kitchen</h3>
+        <div class="section-title">
+            <h2>Product Categories</h2>
             <p>
-                Everyday products designed for modern homes and lifestyles.
+                We work across broad consumer product categories while remaining flexible to new supplier opportunities.
             </p>
         </div>
 
-        <div class="card">
-            <h3>Health & Personal Care</h3>
-            <p>
-                Consumer-focused wellness and personal care solutions.
-            </p>
-        </div>
+        <div class="category-grid">
 
-        <div class="card">
-            <h3>Electronics & Accessories</h3>
-            <p>
-                Practical electronic products and related accessories.
-            </p>
-        </div>
+            <div class="category-card">
+                <h3>Home & Kitchen</h3>
+                <p>Everyday products designed for modern homes and lifestyles.</p>
+            </div>
 
-        <div class="card">
-            <h3>Office & Business Supplies</h3>
-            <p>
-                Reliable office and productivity-focused products.
-            </p>
-        </div>
+            <div class="category-card">
+                <h3>Health & Personal Care</h3>
+                <p>Consumer-focused wellness, grooming, and personal care products.</p>
+            </div>
 
-        <div class="card">
-            <h3>Lifestyle Products</h3>
-            <p>
-                General consumer goods across multiple product categories.
-            </p>
-        </div>
+            <div class="category-card">
+                <h3>Beauty & Wellness</h3>
+                <p>Beauty, self-care, and wellness products for everyday consumers.</p>
+            </div>
 
-        <div class="card">
-            <h3>Seasonal Merchandise</h3>
-            <p>
-                Trending and seasonal product opportunities throughout the year.
-            </p>
+            <div class="category-card">
+                <h3>Electronics & Accessories</h3>
+                <p>Practical electronic products, gadgets, and related accessories.</p>
+            </div>
+
+            <div class="category-card">
+                <h3>Office & Business Supplies</h3>
+                <p>Reliable office, business, and productivity-focused products.</p>
+            </div>
+
+            <div class="category-card">
+                <h3>General Merchandise</h3>
+                <p>Flexible consumer goods across multiple retail product categories.</p>
+            </div>
+
         </div>
 
     </div>
+</section>
 
+<!-- WHY US -->
+
+<section class="section why-section" id="why">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Why Businesses Work With Us</h2>
+            <p>
+                We prioritize professionalism, consistency, and long-term partnerships.
+            </p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-box">
+                <h3>Professional Operations</h3>
+                <p>Structured systems and reliable business processes.</p>
+            </div>
+
+            <div class="why-box">
+                <h3>Growth Focused</h3>
+                <p>Long-term strategies designed for scalable growth.</p>
+            </div>
+
+            <div class="why-box">
+                <h3>Reliable Communication</h3>
+                <p>Clear communication and responsive partnership management.</p>
+            </div>
+
+            <div class="why-box">
+                <h3>Modern Commerce Expertise</h3>
+                <p>Understanding of evolving retail and marketplace environments.</p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section class="section contact" id="contact">
+    <div class="container">
 
-    <div style="max-width:900px;margin:auto;padding:0 20px;">
+        <h2>Contact Us</h2>
 
-    <h2>Contact Us</h2>
+        <p>
+            We are always open to discussing supplier relationships,
+            distribution opportunities, and strategic partnerships.
+        </p>
 
-    <p>
-        We are always open to discussing supplier relationships,
-        distribution opportunities, and strategic partnerships.
-    </p>
+        <br>
 
-    <br>
+        <p>Email: <a href="mailto:info@nasvora.com">info@nasvora.com</a></p>
 
-    <p>Email: info@nasvora.com</p>
-
-    <p>Website: www.nasvora.com</p>
+        <p>Website: www.nasvora.com</p>
 
     </div>
-
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-
     © 2026 Nasvora. All Rights Reserved.
-
 </footer>
 
 </body>
-
 </html>
